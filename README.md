@@ -1,1 +1,1 @@
-# masterslearningaibook
+# masters book
