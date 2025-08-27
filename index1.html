@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Haunted Hacker Hallway</title>
+  <style>
+    html, body { margin: 0; overflow: hidden; background: black; }
+    canvas { display: block; }
+
+    #controller {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      display: grid;
+      grid-template-areas:
+        ". up ."
+        "left . right"
+        ". down .";
+      grid-template-columns: 50px 50px 50px;
+      grid-template-rows: 50px 50px 50px;
+      gap: 5px;
+      z-index: 1000;
+    }
+
+    #controller button {
+      background: #000;
+      color: #00ff00;
+      font-size: 24px;
+      border: 2px solid #00ff00;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #00ff00aa;
+      touch-action: manipulation;
+    }
+
+    #up    { grid-area: up; }
+    #down  { grid-area: down; }
+    #left  { grid-area: left; }
+    #right { grid-area: right; }
+  </style>
+</head>
+<body>
+</body>
+</html>
