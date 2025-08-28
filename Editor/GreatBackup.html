@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Code Review App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="stylesMain.css">
+<script src="mainScripts.js" defer></script>
+</head>
+<body>
+<!--------------Header-------------------->
+  <header>
+
+<input type="file" id="fileInput" multiple accept="*" style="display:none">
+
+    <button onclick="fileInput.click()">Choose Files</button>
+    <button id="btnToggle">Display Output</button>
+    <button id="btnLines">Toggle Lines</button>
+    <button onclick="document.getElementById('notesPanel').classList.toggle('open')">Notes</button>
+  </header>
+<!----------EndHeader----------------------->
+<!----------StartMain------------------------->
+<main id=main>
+<!--Section Home-->
+  <section id="home" class="active">
+    <h1>Welcome to Your Code Review</h1>
+    <p>Load up to 3 files (HTML, CSS, JS or any) in Editor to edit, preview, parse, and stash notes.</p>
+    <ul>
+      <li>Toggle view/output</li>
+      <li>Show/hide line numbers</li>
+      <li>Take notes in the drawer</li>
+      <li>See live parsing in Parser</li>
+      <li>Next: Full Analysis with fuzzy matching (login)</li>
+    </ul>
+  </section>
+<!-- End -->
+<!--Section Editor-->
+  <section id="editor">
+    <div id="notesPanel">
+      <h3>Notes</h3>
+      <textarea style="width:100%;height:85%;background:#000;color:#0f0;"></textarea>
+    </div>
+    <pre id="codeView"></pre>
+    <iframe id="editorFrame" sandbox="allow-scripts"></iframe>
+  </section>
+<!-- End -->
+<!--Section Parser-->
+  <section id="parser">
+    <h2>Parser Output</h2>
+    <div id="parserContent"><p>Load files to parse...</p></div>
+  </section>
+<!-- End -->
+<!--Section Analysis-->
+  <section id="analysis">
+    <h2>Full Analysis (Login Required)</h2>
+    <p>🛠 Stubbed for now — advanced fuzzy + mismatch logic coming soon.</p>
+  </section>
+<!-- End -->
+</main>
+<!-------------Footer-------------------->
+  <footer>
+    <button data-sec="home" class="active">Home</button>
+    <button data-sec="editor">Editor</button>
+    <button data-sec="parser">Parser</button>
+    <button data-sec="analysis">Analysis</button>
+  </footer>
+</body>
+</html>

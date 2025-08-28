@@ -1,0 +1,82 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #2c2c2c, #3e4a5a);
+  color: #ffffff;
+}
+
+header.site-header,
+footer.glass-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff;
+  border: none;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+footer.glass-panel {
+  bottom: 0;
+  top: auto;
+  justify-content: center;
+}
+
+.logo-left {
+  height: 60px;
+  margin-right: auto;
+}
+
+.menu-toggle {
+  font-size: 2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+.main-content {
+  padding: 100px 2rem 100px;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #00ccff;
+  margin-bottom: 1rem;
+}
+
+.map-iframe {
+  width: 100%;
+  height: 1100px;
+  border: none;
+  border-radius: 10px;
+  background: #000;
+}
+
+.news-iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 10px;
+  background: #111;
+}
+
+.status-panel ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.status-panel li {
+  padding: 0.5rem 0;
+}

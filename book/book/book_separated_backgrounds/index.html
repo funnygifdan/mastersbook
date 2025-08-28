@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Funcryptology</title>
+<script defer src="index.js"></script>
+<script defer src="editor.js"></script>
+<link rel="stylesheet" href="index.css"> 
+<link rel="stylesheet" href="BGcolorChanger.css"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--<style>-->
+</head>
+<body>
+
+<header></header>
+
+<main class="content" id="dynamicContent">
+  <!--<div class="svg-background">-->
+
+ <p style="margin-top: 250px">
+
+ <h1>Welcome to Funcryptology</h1>
+<h3><p>Use the menu to navigate. Scroll and interact, more updates coming!</p></h3>
+ <p style="margin-top: 2000px">Bottom reached!</p>
+
+
+</main>
+<footer>
+    <div class="footer-left">
+      <img src="logo.jpg" alt="Logo" class="logo">
+    </div>
+    <h1 class="footerTitle">Funcryptology</h1>
+    <div class="footer-right">
+      <div id="menuToggle">☰</div>
+    </div>
+
+  <nav id="menuOverlay">
+      <h1>Menu</h1>
+     <button id="closeMenu" class="closeMenu">&times;</button>
+   <div class="menu-sections">
+
+<div class="menu-section">
+
+<h2>Featured Sites</h2>
+<a href="https://funcryptology.netlify.app">Funcryptology</a>
+ <a href="https://saranova.netlify.app">Saranova AI</a>
+ <a href="./podcast/podcast.html".html">Podcast</a>
+ <a href="threatmap/mainthreat.html">Cyber</a>
+
+ <a href="./book/book.html">Book</a>
+      </div>
+      <div class="menu-section">
+        <h2>Core</h2>
+        <a href="#">Overview</a>
+        <a href="#">Getting Started</a>
+        <a href="#">Roadmap</a>
+        <a href="#">Docs</a>
+      </div>
+      <div class="menu-section">
+        <h2>Programs</h2>
+        <a href="#">HTML Builder</a>
+        <a href="#">Layout Examples</a>
+        <a href="#">JS Features</a>
+        <a href="#">Project Vault</a>
+        <a href="#">Contribute</a>
+      </div>
+      <div class="menu-section">
+        <h2>Free</h2>
+        <a href="#">Courses</a>
+        <a href="editor.html">Webtool</a>
+        <a href="#">Resources</a>
+        <a href="#">Templates</a>
+      </div>
+      <div class="menu-section">
+        <h2>Who We Are</h2>
+        <a href="#">About</a>
+        <a href="#">Team</a>
+        <a href="#">Vision</a>
+        <a href="#">Careers</a>
+      </div>
+    </div>
+  </nav>
+</footer>
+</body>
+</html>
+
+  <!--<style>
+
+    <h2>Featured Sites</h2>
+    <ul>
+      <li><a href="#">Funcryptology</a></li>
+      <li><a href="#">Saranova AI</a></li>
+      <li><a href="#">Podcast</a></li>
+      <li><a href="#">Cyber</a></li>
+    </ul>
+  </div>
+
+  <div class="menu-section">
+    <h2>Core</h2>
+    <ul>
+      <li><a href="#">Overview</a></li>
+      <li><a href="#">Getting Started</a></li>
+      <li><a href="#">Roadmap</a></li>
+      <li><a href="#">Docs</a></li>
+    </ul>
+  </div>
+
+  <div class="menu-section">
+    <h2>Program Examples</h2>
+    <ul>
+      <li><a href="#">HTML Builder</a></li>
+      <li><a href="#">Layout Examples</a></li>
+      <li><a href="#">JS Features</a></li>
+      <li><a href="#">Project Vault</a></li>
+    </ul>
+  </div>
+
+  <div class="menu-section">
+    <h2>Free</h2>
+    <ul>
+      <li><a href="#">Courses</a></li>
+      <li><a href="#">Webtool</a></li>
+      <li><a href="#">Resources</a></li>
+      <li><a href="#">Templates</a></li>
+    </ul>
+  </div>
+
+  <div class="menu-section" style="grid-column: 1 / -1; text-align: center;">
+    <h2>Who We Are</h2>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Team</a></li>
+      <li><a href="#">Vision</a></li>
+      <li><a href="#">Careers</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    :root {
+      --blue: #008ae6;
+      --black: #000000;
+      --dark-gray: #1a1a1a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(85deg, var(--black), var(--blue), var(--dark-gray));
+      background-size: 400% 400%;
+      animation: bgShift 28s ease infinite;
+      color: white;
+      overflow: hidden;
+      position: relative;
+    }
+
+    @keyframes bgShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      height: 80px;
+      background: #1a1a1a;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 0 1rem;
+      z-index: 9999;
+      border-bottom: 2px solid #0099EA;
+      flex-shrink: 0;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .headerTitle {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    #menuToggle {
+      font-size: 2rem;
+      background: black;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    nav#menuOverlay {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 70vh;
+      backdrop-filter: blur(18px);
+      background: rgba(15, 15, 15, 0.85);
+      transform: scaleY(0);
+      transform-origin: bottom center;
+      transition: transform 0.4s ease;
+      z-index: 900;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      overflow-y: auto;
+    }
+
+    #menuOverlay.open {
+      transform: scaleY(1);
+    }
+
+    .menu-header {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    .menu-header h2 {
+      font-size: 2.5rem;
+      color: #00ffcc;
+    }
+
+    #closeMenu {
+      position: absolute;
+      right: 0;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    main {
+      flex: 1;
+      overflow-y: auto;
+      background: linear-gradient(85deg, var(--black), var(--blue), var(--dark-gray));
+      background-size: 400% 400%;
+      animation: bgShift 28s ease infinite;
+      -webkit-overflow-scrolling: touch;
+      min-height: 0;
+    }
+
+    footer {
+      height: 60px;
+      width: 100%;
+      background: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      border-top: 2px solid #0099EA;
+      flex-shrink: 0;
+      z-index: 9999;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      width: 100%;
+    }
+
+    .menu-section a {
+      display: block;
+      margin: 0.25rem 0;
+      color: #00ffcc;
+      text-decoration: none;
+    }
+
+    .menu-section a:hover {
+      text-decoration: underline;
+    }-->

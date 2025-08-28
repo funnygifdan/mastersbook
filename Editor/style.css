@@ -1,0 +1,185 @@
+
+body {
+  background-color: black;
+  color: white;
+  font-family: monospace;
+  padding: 1rem;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #00ff00;
+}
+
+input, button {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  background: #222;
+  color: white;
+  border: 1px solid #00ff00;
+}
+
+.selector-block {
+  border: 2px solid #00ffcc;
+  margin: 2rem 0;
+  padding: 1rem;
+  background: #111;
+  position: relative;
+}
+
+.selector-name {
+  background-color: #000080;
+  color: #00ff00;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.selector-name.selected {
+  background-color: #002288;
+}
+
+.selector-index {
+  position: absolute;
+  top: 5px;
+  left: -30px;
+  color: #808080;
+  font-size: 1rem;
+}
+
+.file-name {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-size: 0.9rem;
+  color: #ccc;
+  font-weight: bold;
+}
+
+.dup-status {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.dup-status.dup { color: red; }
+.dup-status.unique { color: #00ff00; }
+
+.style-line {
+  background: #222;
+  margin: 2px 0;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-left: 4px solid #555;
+}
+
+.style-line.selected {
+  background-color: #000080;
+  color: #00ff00;
+  border-left-color: #00ff00;
+}
+
+pre {
+  background: #000;
+  color: #00ff00;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.id-box {
+  position: absolute;
+  right: 10px;
+  bottom: -1.2rem;
+  color: #ccc;
+  font-size: 0.8rem;
+}
+
+.highlight-id {
+  color: #00ff00 !important;
+}
+
+
+/* Updated file list styling with section borders */
+#fileList {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #111;
+  border: 1px solid #00ff00;
+  border-radius: 6px;
+  color: #00ffcc;
+}
+
+#fileList > div {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #00ff00;
+}
+
+#fileList > div:last-child {
+  border-bottom: none;
+}
+
+.file-line {
+  display: block;
+  color: #fff;
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+  word-wrap: break-word;
+}
+
+/* DOM reference checker section */
+#domCheck {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #111;
+  border: 1px solid #00ff00;
+  border-radius: 6px;
+}
+
+#domCheck .dom-row {
+  padding: 0.5rem 0.75rem;
+  margin: 0.4rem 0;
+  background: #222;
+  border-left: 4px solid #00ff00;
+  font-size: 0.9rem;
+  word-wrap: break-word;
+}
+
+/* Responsive stack for mobile */
+@media (max-width: 768px) {
+  .file-line {
+    font-size: 0.85rem;
+  }
+
+  #fileList, #domCheck {
+    font-size: 0.95rem;
+  }
+
+  #fileList > div {
+    padding: 0.5rem 0;
+  }
+}
+
+.uploaded-list {
+  list-style: none;
+  padding-left: 10px;
+  color: #00ff99;
+  font-family: monospace;
+}
+.uploaded-list li {
+  margin: 2px 0;
+}
+
+
+.section-border {
+  width: 100%;
+  height: 2px;
+  background: var(--green);
+  box-shadow: 0 0 4px var(--green), 0 0 8px var(--green);
+  margin: 2rem 0;
+  border: none;
+}

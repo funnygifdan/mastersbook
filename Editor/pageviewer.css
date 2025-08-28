@@ -1,0 +1,19 @@
+pre, iframe {
+  width: 100%;
+  height: 75vh;
+  display: none;
+  background: #000;
+  color: #0f0;
+  border: none;
+  padding: 1em;
+  overflow: auto;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+#codeView.show,
+#editorFrame.show {
+  display: block;
+}

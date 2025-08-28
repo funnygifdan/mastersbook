@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  color: slategray;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+header, footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: #111;
+  z-index: 1000;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0.5em;
+  box-shadow: 0 2px 6px #000;
+}
+
+header {
+  top: 0;
+}
+
+footer {
+  bottom: 0;
+  justify-content: space-around;
+}
+
+section {
+  flex: 1;
+  margin: 3em 0;
+  padding: 1em;
+  overflow-y: auto;
+  display: none;
+}
+
+section.active {
+  display: block;
+}
+
+button {
+  flex-shrink: 0;
+  padding: 0.6em 1em;
+  margin-right: 0.5em;
+  border-radius: 5px;
+  border: 1px solid #00FF00;
+  background: rgba(0, 255, 0, 0.1);
+  color: #00FF00;
+  font-weight: bold;
+  text-shadow: 0 0 5px #fff;
+  transition: all 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px #00ff00;
+}
+
+button.active {
+  background: #001F3F;
+  color: slategray;
+  border-color: slategray;
+  text-shadow: none;
+}
+
+#notesPanel {
+  position: fixed;
+  top: 3em;
+  left: -80vw;
+  width: 80vw;
+  height: calc(100vh - 6em);
+  background: #222;
+  padding: 1em;
+  color: #0f0;
+  z-index: 999;
+  transition: left 0.3s ease;
+}
+
+#notesPanel.open {
+  left: 0;
+}
+
+#editorFrame,
+#codeView {
+  width: 100%;
+  height: 70vh;
+  border: 1px solid #444;
+  font-family: 'Fira Code', monospace;
+  background: #000;
+  overflow: auto;
+}
+
+#codeView {
+  white-space: pre-wrap;
+  font-size: 1em;
+  line-height: 1.5em;
+  padding: 1em;
+}
+
+.token-linenum {
+  display: inline-block;
+  width: 3em;
+  margin-right: 0.5em;
+  color: #708090;
+}
+
+.token-key {
+  color: #00FF00;
+}
+
+.token-func {
+  color: #FF3131;
+  font-weight: bold;
+}
+
+.token-str {
+  color: #4FC3F7;
+}
+
+.token-comm {
+  color: #777;
+  font-style: italic;
+}
+
+/* Parser Neon Tables */
+#parserContent h3 {
+  color: #00FF00;
+  text-shadow: 0 0 4px #00FF00;
+}
+
+#parserContent table {
+  border: 2px solid #4FC3F7;
+  background: #000;
+  color: #00FF00;
+  box-shadow: 0 0 10px #4FC3F7;
+  width: 100%;
+  margin: 1em 0;
+  font-size: 0.9em;
+  border-collapse: collapse;
+}
+
+#parserContent th {
+  background: #001F3F;
+  color: #4FC3F7;
+  text-shadow: 0 0 3px #4FC3F7;
+}
+
+#parserContent td {
+  border: 1px solid #4FC3F7;
+}
+
+#parserContent td:contains('❌') {
+  color: #FF3131;
+  font-weight: bold;
+}
+
+#parserContent td:contains('✅') {
+  color: #00FF00;
+  font-weight: bold;
+}
+
+table th,
+table td {
+  padding: 0.5em;
+  text-align: left;
+}
+
+h1, h2, h3 {
+  color: #00ff00;
+  text-shadow: 0 0 4px #fff;
+}
+
+ul {
+  padding-left: 1.5em;
+}
+
+pre, iframe {
+  width: 100%;
+  height: 75vh;
+  display: none;
+  background: #000;
+  color: #0f0;
+  border: none;
+  padding: 1em;
+  overflow: auto;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+#codeView.show,
+#editorFrame.show {
+  display: block;
+}

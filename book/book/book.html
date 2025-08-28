@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HumanAI - Book</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bookstyle.css">
+</head>
+<body>
+<main>
+  <div id="bookContainer">
+    <div class="page active" style="background-image: url('book.jpg');"></div>
+    <div class="page" style="background-image: url('page1.jpg');"></div>
+    <div class="page" style="background-image: url('page2.jpg');"></div>
+    <div class="page" style="background-image: url('page3.jpg');"></div>
+    <div class="page" style="background-image: url('page4.jpg');"></div>
+    <div class="page" style="background-image: url('page5.jpg');"></div>
+  </div>
+</main>
+
+<script>
+  const pages = document.querySelectorAll('#bookContainer .page');
+  let current = 0;
+
+  function showPage(index) {
+    pages.forEach((p, i) => {
+      p.classList.remove('active', 'prev', 'next');
+      if (i === index) p.classList.add('active');
+      else if (i < index) p.classList.add('prev');
+      else p.classList.add('next');
+    });
+  }
+
+  function nextPage() {
+    if (current < pages.length - 1) {
+      current++;
+      showPage(current);
+    }
+  }
+
+  function prevPage() {
+    if (current > 0) {
+      current--;
+      showPage(current);
+    }
+  }
+
+  let startX = 0;
+  document.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+  document.addEventListener('touchend', e => {
+    const endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) nextPage();
+    else if (endX - startX > 50) prevPage();
+  });
+
+  document.addEventListener('click', () => nextPage());
+</script>
+</body>
+</html>
